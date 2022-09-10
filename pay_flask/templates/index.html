@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stripe and Flask Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+
+<body>
+    <div class="root">
+        <div class="nav">
+            Payment Gateway ( Demo )
+        </div>
+        <h3 class="desc">All transactions are demo, so you won't spend any actual money here.....your information is
+            safe.</h3>
+
+        <h2 class="try">Try it out!</h2>
+        <div class="product-wrapper">
+            {% for id in products %}
+            <div class="product-card">
+                <div class="card-top">{{ products[id].name }}</div>
+                <form class="card-down" method="POST" action="/order/{{ id }}">
+                    <div class="price">NGN {{ "{:.2f}".format(products[id].price/100) }}</div>
+                    <input type="submit" value="Order Now!">
+                </form>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</body>
+
+</html>
