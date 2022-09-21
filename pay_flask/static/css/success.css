@@ -16,20 +16,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90px;
+    height: 60px;
     background-color: rgb(2, 2, 32);
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100vw;
     color: cyan;
+    max-width: 100vw;
+    min-width: 100vw;
   }
   
   .wrapper {
     background-color: white;
     width: 270px;
     height: 270px;
-    margin-top: 90px;
+    margin-top: 45px;
     border-radius: 7px;
     border: 2px solid black;
     padding: 20px;
