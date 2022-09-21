@@ -13,7 +13,7 @@
 <body>
     <div class="root">
         <div class="nav">
-            Payment Gateway ( Demo )
+            Payment Gateway
         </div>
         <h3 class="desc">All transactions are demo, so you won't spend any actual money here.....your information is
             safe.</h3>
@@ -25,7 +25,7 @@
                 <div class="card-top">{{ products[id].name }}</div>
                 <form class="card-down" method="POST" action="/order/{{ id }}">
                     <div class="price">NGN {{ "{:.2f}".format(products[id].price/100) }}</div>
-                    <input type="submit" value="Order Now!">
+                    <input type="submit" value="Order Now">
                 </form>
             </div>
             {% endfor %}
