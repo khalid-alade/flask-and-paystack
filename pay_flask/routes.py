@@ -31,7 +31,7 @@ def order(product_id):
     if product_id not in products:
         abort(404)
     auth_headers ={
-        "Authorization": "Bearer {your secret key}",
+        "Authorization": "Bearer sk_test_7e747d8832ca52dad6639c6f2b7042e10c5fb6eb",
         "Content-Type": "application/json"
     }
     auth_data = { "email": "customer@email.com", "amount": "{}".format(products[product_id]['price']) }
@@ -45,7 +45,7 @@ def order(product_id):
 def order_success():
     ref = request.args['trxref']
     auth_headers ={
-        "Authorization": "Bearer {your secret key}",
+        "Authorization": "Bearer sk_test_7e747d8832ca52dad6639c6f2b7042e10c5fb6eb",
         "Content-Type": "application/json"
     }
     req = requests.get('https://api.paystack.co/transaction/verify/{}'.format(ref), headers=auth_headers)
