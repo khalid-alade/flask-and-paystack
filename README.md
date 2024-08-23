@@ -1,6 +1,6 @@
 # flask-and-paystack
 
->  A web app for for seamless payment processing, ensuring robust security and reliability.
+>  A web app for seamless payment processing, ensuring robust security and reliability.
 >  Integrated Paystack API, Python, and Flask
 
 
